@@ -19,8 +19,15 @@ app.post("/",function(req,res){
 
 app.get("/",function(req,res){
     var date = new Date();
-    var today = date.getDay();
-    res.render("display", { dateDisplay : date, itemListDisplay : itemList  });
+
+    var today = date.toLocaleDateString("en-US", {
+        "weekday": "long",
+        "day": "numeric",
+        "year": "numeric",
+        "month": "long"
+    });
+
+    res.render("display", { dateDisplay : today, itemListDisplay : itemList  });
 
 })
 
