@@ -6,7 +6,7 @@ const app = express();
 var itemList = [];
 
 app.set("view engine", "ejs");
-
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post("/",function(req,res){
