@@ -54,6 +54,10 @@ app.get("/",function(req,res){
     
 })
 
+app.get("/:param",function(req,res){
+    console.log(req.params.param);
+})
+
 app.post("/",function(req,res){
     //Inserting the newItem into the Database
     let newItem = new Item({
@@ -75,8 +79,6 @@ app.post("/delete",function(req,res){
             res.redirect("/");
         }
     })
-
-
 })
 
 app.listen(3000,function(){
