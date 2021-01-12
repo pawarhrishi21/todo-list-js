@@ -9,9 +9,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.set('useFindAndModify', false); // o/w Depreciation warning for using findOneAndUpdate() 
+mongoose.connect("mongodb+srv://<URL TO THE DATABASE ON ATLAS>", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.set('useFindAndModify', false); // o/w Depreciation warning for using findOneAndUpdate()
 
 const itemsSchema = {
     name: String,
