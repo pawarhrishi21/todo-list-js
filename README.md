@@ -1,3 +1,3 @@
 # todo list
 
-Built using EJS templates and nodejs with express. 
+Built using EJS templates, Nodejs with Expressjs and MongoDB Atlas. 
